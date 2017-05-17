@@ -81,4 +81,42 @@ module YourApp
 end
 ```
 
+The database.yml file should look like this 
+> database.yml 
+```yml
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: wpgdfdne
+  username: wpgdfdne
+  password: Ra9E4-41dR581erkWTVEu47MtfSIdHER
+  host: stampy.db.elephantsql.com
+  port: 5432
+```
 
+Let's test the progreess with some front end JS Code
+### POST with Ajax
+
+```javascript
+$(document).ready(function() {
+  
+  var url = "https://rails-api-shadid121.c9users.io/v1/users"
+  var d = {
+    'user':{
+      'name':'shadid',
+      'email': 'shadid@gmail.com'
+    }
+  }
+  
+  $.ajax({
+    type: "POST",
+    url: url,
+    data: d,
+    success: function(res){
+      console.log(res);
+    }
+    
+  });
+  
+});
+```
