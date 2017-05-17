@@ -1,0 +1,16 @@
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: wpgdfdne
+  username: wpgdfdne
+  password: Ra9E4-41dR581erkWTVEu47MtfSIdHER
+  host: stampy.db.elephantsql.com
+  port: 5432
+
+development:
+  adapter: postgresql
+  encoding: SQL_ASCII
+  database: myapp_development
+  pool: 5
+  username: ubuntu
+  password: password
