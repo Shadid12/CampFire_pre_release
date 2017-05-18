@@ -1,6 +1,9 @@
 import { Component } from 'react'
 import { Link } from 'react-router'
 
+
+
+
 export class NotLogged extends Component{
 	render(){
 		return(
@@ -19,6 +22,12 @@ export class NotLogged extends Component{
 }
 
 export class Logged extends Component{
+
+	logOutHandler(){
+		window.localStorage.removeItem('token');
+		window.location.assign("/");
+	}
+
 	render(){
 		return(
 	<nav>
@@ -28,7 +37,7 @@ export class Logged extends Component{
 				<li> <Link to="/"> Home </Link> </li>
 				<li> <a href="#"> Post </a></li>
 				<li><a href="#"> Groups </a></li>
-				<li><a href="#"> Logout </a></li>
+				<li><a onClick={this.logOutHandler}> Logout </a></li>
 			</ul>
 		</div>
 	</nav>
