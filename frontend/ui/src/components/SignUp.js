@@ -6,7 +6,7 @@ export class SignUp extends Component{
 	state = {
 			name: '',
 			email: '',
-			password: ''
+			password: '',
 	}
 
 	handlePost = (e) => {
@@ -28,17 +28,44 @@ export class SignUp extends Component{
 			type: "POST",
 			url: url,
 			data: d,
+			email: d.user.email,
+			password:d.user.password,
 			
 			success: function(res){
+			  // sign in after
 			  console.log(res);
-			}
+			  const lrl = "http://localhost:8080/user_token"
+			  const l = {
+			  	'auth':{
+			  		'email': this.email,
+			  		'password': this.password
+			  	}
+			  }
+
+			  $.ajax({
+			  	type: "POST",
+				url: lrl,
+				data: l,
+
+				success: function(r){
+					console.log(r);
+					window.location.assign("/");
+				}
+
+			  })
+			} // end of success function
 
 		});
 		this.setState( { name: '', email: '', password: '' } );
 		e.preventDefault();
 	}
 
+	logIn(){
+		console.log("Lets see if we can do it");
+	}
+
 	render(){
+
 		return(
 			<div className="center">
 			<h2>Sign Up :) </h2>
