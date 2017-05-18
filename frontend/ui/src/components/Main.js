@@ -6,7 +6,7 @@ export class Main extends Component {
 	    return(
 	        <div>
 	        	<Nav />
-	        	<h3>Hello Main Component</h3>
+	        	<h3></h3>
 	        	{ this.props.children }
 	        </div>
 	   );
