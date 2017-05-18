@@ -49,6 +49,8 @@ export class SignUp extends Component{
 
 				success: function(r){
 					console.log(r);
+					localStorage.setItem('token', r.jwt);
+					console.log(localStorage.getItem('token'));
 					window.location.assign("/");
 				}
 
