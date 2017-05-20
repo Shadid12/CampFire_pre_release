@@ -1,5 +1,6 @@
 var webpack = require("webpack");
 
+
 module.exports = {
   entry: "./src/index.js",
   output: {
@@ -48,7 +49,6 @@ module.exports = {
         test: /\.(jpg|png|svg)$/,
         loader: 'url-loader',
       },
-
     ]
   }
 }
