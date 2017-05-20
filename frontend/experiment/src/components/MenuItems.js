@@ -21,9 +21,8 @@ export class MenuItems extends Component{
                    onMouseEnter={ () => { $('#a').addClass('animated jello'); } }
                    onMouseLeave={ () => { $('#a').removeClass('animated jello'); } }
                    href="#">
-                    <img src="./assets/icons/011-computer.svg" alt="Home" style={ { "width": 100, "height": 100 } } />
-                    <br />
-                    Home
+                    <img src="./assets/icons/011-computer.svg" alt="Home" className="imgClass" />
+                    <div>Home</div>
                 </a>
               </li>
               <li className="site-nav__item">
@@ -31,9 +30,9 @@ export class MenuItems extends Component{
                    id="b"
                    onMouseEnter={ () => { $('#b').addClass('animated jello'); } }
                    onMouseLeave={ () => { $('#b').removeClass('animated jello'); } } >
-                    <img src="./assets/icons/004-apple.svg" alt="Home" style={ { "width": 100, "height": 100 } }  />
+                    <img src="./assets/icons/004-apple.svg" alt="Home" className="imgClass" />
                     <br />
-                    About Me
+                    <div>About Me</div>
                 </a>
               </li>
               <li className="site-nav__item">
@@ -41,9 +40,8 @@ export class MenuItems extends Component{
                    id="c"
                    onMouseEnter={ () => { $('#c').addClass('animated jello'); } }
                    onMouseLeave={ () => { $('#c').removeClass('animated jello'); } } >
-                    <img src="./assets/icons/006-chemistry.svg" alt="Home" style={ { "width": 100, "height": 100 } }  />
-                    <br />
-                    Resume
+                    <img src="./assets/icons/006-chemistry.svg" alt="Home" className="imgClass"  />
+                    <div>Resume</div>
                 </a>
               </li>
               <li className="site-nav__item">
@@ -53,7 +51,7 @@ export class MenuItems extends Component{
                     onMouseLeave={ () => { $('#d').removeClass('animated jello'); } } >
                     <img src="./assets/icons/009-bookshelf.svg" alt="Home" style={ { "width": 100, "height": 100 } }  />
                     <br />
-                    My Work
+                    <div>My Work</div>
                 </a>
               </li>
 

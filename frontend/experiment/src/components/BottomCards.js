@@ -19,7 +19,7 @@ export class BottomCards extends Component{
 		return(
 			<div className="container">
 				<div className="card card-1" id="f">
-					<img src="http://myartmagazine.com/file/images/12-2015/5-girl-surreal-art.preview.jpg" alt="Smiley face" height="300" width="300"/>
+					<img src="https://krourke.org/img/md_avatar_stormtrooper.svg" alt="Smiley face" id="aimg" />
 				</div>
 			</div>
 
