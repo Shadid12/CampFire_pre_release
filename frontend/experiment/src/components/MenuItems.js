@@ -20,19 +20,20 @@ export class MenuItems extends Component{
                    id="a"
                    onMouseEnter={ () => { $('#a').addClass('animated jello'); } }
                    onMouseLeave={ () => { $('#a').removeClass('animated jello'); } }
-                   href="#">
+                   href="/">
                     <img src="./assets/icons/011-computer.svg" alt="Home" className="imgClass" />
                     <div>Home</div>
                 </a>
               </li>
               <li className="site-nav__item">
                 <a className="site-nav__link"
+                   href="/#/gallery"
                    id="b"
                    onMouseEnter={ () => { $('#b').addClass('animated jello'); } }
                    onMouseLeave={ () => { $('#b').removeClass('animated jello'); } } >
                     <img src="./assets/icons/004-apple.svg" alt="Home" className="imgClass" />
                     <br />
-                    <div>About Me</div>
+                    <div>Gallery</div>
                 </a>
               </li>
               <li className="site-nav__item">
@@ -49,7 +50,7 @@ export class MenuItems extends Component{
                     id="d"
                     onMouseEnter={ () => { $('#d').addClass('animated jello'); } }
                     onMouseLeave={ () => { $('#d').removeClass('animated jello'); } } >
-                    <img src="./assets/icons/009-bookshelf.svg" alt="Home" style={ { "width": 100, "height": 100 } }  />
+                    <img src="./assets/icons/micro.svg" alt="Home" className="imgClass"  />
                     <br />
                     <div>My Work</div>
                 </a>

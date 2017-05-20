@@ -34,6 +34,7 @@
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-router": "^2.8.1",
+    "react-router-page-transition": "^3.0.2",
     "react-svg-loader": "^1.1.1"
   }
 }

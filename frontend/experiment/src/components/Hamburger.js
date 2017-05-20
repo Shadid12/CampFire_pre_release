@@ -4,6 +4,8 @@ import $ from 'jquery';
 import animate from 'animate.css';
 import { MenuItems } from './MenuItems'
 import { BottomCards } from './BottomCards'
+import { PageTransition } from 'react-router-page-transition';
+
 
 export class Hamburger extends Component{
 
@@ -41,6 +43,7 @@ export class Hamburger extends Component{
   	<h1 id="heading">The Boring Site</h1>
   	{ this.state.isOpen ?
   		<div>
+
 			<MenuItems />
 			<br /><br /><br /><br /><br /><br />
 			<BottomCards />
