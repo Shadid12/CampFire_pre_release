@@ -37,7 +37,7 @@ export class Login extends Component{
 		return(
 
 			<div className="center">
-			<h2>Sign Up :) </h2>
+			<h2>Log in Form</h2>
 			<div className="row">
 				<div className="col s12">
 					 <div className="row">
