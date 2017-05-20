@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { Loading } from './helpers/Loading';
+import { Photo } from './helpers/Photo'
 
 export class Gallery extends Component{
 
@@ -10,7 +11,7 @@ export class Gallery extends Component{
 	componentDidMount() {
 		setTimeout( () => {
 			this.setState( { loader: false } );
-		}, 1500)
+		}, 2000)
 		
 	}
 
@@ -19,7 +20,7 @@ export class Gallery extends Component{
 			<div>
 			{ this.state.loader ?
 				<Loading /> :
-				<h3>Welcome to the page</h3>
+				<Photo />
 			}
 			</div>
 		)
