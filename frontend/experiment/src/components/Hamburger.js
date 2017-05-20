@@ -3,6 +3,7 @@ import './hamburger.css';
 import $ from 'jquery';
 import animate from 'animate.css';
 import { MenuItems } from './MenuItems'
+import { BottomCards } from './BottomCards'
 
 export class Hamburger extends Component{
 
@@ -39,12 +40,18 @@ export class Hamburger extends Component{
   <div className="center">
   	<h1 id="heading">The Boring Site</h1>
   	{ this.state.isOpen ?
-		<MenuItems />
+  		<div>
+			<MenuItems />
+			<br /><br /><br /><br /><br /><br />
+			<BottomCards />
+		</div>
 		:
 		<p></p>
   	}
   </div>
+
 </div>
+
 
 
 
