@@ -11,7 +11,7 @@ export class Gallery extends Component{
 	componentDidMount() {
 		setTimeout( () => {
 			this.setState( { loader: false } );
-		}, 2000)
+		}, 700)
 		
 	}
 
