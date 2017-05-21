@@ -65,3 +65,14 @@
   opacity: 0;
   visibility: hidden;
 }
+
+@media screen and (max-width: 1270px){
+
+.pause-btn {
+  display: inline-block;
+  height: 30px;
+  width: 23px;
+  cursor: pointer;
+}
+
+}

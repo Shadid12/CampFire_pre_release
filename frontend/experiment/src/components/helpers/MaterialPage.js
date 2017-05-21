@@ -3,26 +3,27 @@ import '../styles/material.css';
 import {MediaQuery} from 'react-responsive';
 import { PlayButton } from './PlayButton'
 import $ from 'jquery';
-import { MenuItems } from '../MenuItems';
+
 
 export class MaterialPage extends Component{
 
-	componentDidMount() {
-		setTimeout( () => { 
-			$("#s").addClass("animated swing") }, 1000)
+	state = {
+		isPlaying: false
 	}
 
 	goBack(){
 		window.location.href = "/";
 	}
 
+	handlePlaying(){
+		console.log("Fucking A");
+	}
+
 	render(){
 		return(
 			<div className="container">
 				<div className="center">
-					<MenuItems />
-					<h3 className="cyan-text text-lighten-1" id="s"> Play me  !!</h3>
-					<PlayButton />
+					<PlayButton handler = {this.handlePlaying}/>
 				</div>
 			</div>
 		)

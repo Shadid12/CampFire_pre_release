@@ -38544,7 +38544,7 @@
 
 
 	// module
-	exports.push([module.id, ".card {\n  background: #fff;\n  border-radius: 25px;\n  display: inline-block;\n  height: 300px;\n  margin: 1rem;\n  position: relative;\n  width: 300px;\n}\n\n.card-1 {\n  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);\n  transition: all 0.3s cubic-bezier(.25,.8,.25,1);\n}\n\n.card-1:hover {\n  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);\n}\n\n.cardLink{\n  position: relative;\n}\n\n#aimg{\n  border-radius: 25px;\n  height: 300px;\n  width: 300px;\n}\n\n@media only screen and (max-width: 750px) {\n  #aimg{\n  border-radius: 25px;\n  height: 200px;\n  width: 200px;\n}\n.card {\n  background: #fff;\n  border-radius: 25px;\n  display: inline-block;\n  height: 200px;\n  margin: 1rem;\n  position: relative;\n  width: 200px;\n}\n\n}", ""]);
+	exports.push([module.id, ".card {\n  background: #fff;\n  border-radius: 25px;\n  display: inline-block;\n  height: 300px;\n  margin: 1rem;\n  position: relative;\n  width: 300px;\n}\n\n.card-1 {\n  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);\n  transition: all 0.3s cubic-bezier(.25,.8,.25,1);\n}\n\n.card-1:hover {\n  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);\n}\n\n.cardLink{\n  position: relative;\n}\n\n#aimg{\n  border-radius: 25px;\n  height: 300px;\n  width: 300px;\n  right: 100px;\n}\n\n@media screen and (max-width: 1275px) {\n  #aimg{\n  border-radius: 25px;\n  width: 80%;\n  height: 80%;\n}\n.card {\n  background: #fff;\n  border-radius: 25px;\n  display: inline-block;\n  height: 90%;\n  width: 90%;\n  margin: 1rem;\n  position: relative;\n}\n\n}\n\n@media only screen and (max-width: 750px){\n\n}", ""]);
 
 	// exports
 
@@ -41241,28 +41241,41 @@
 			value: function render() {
 				return React.createElement(
 					'div',
-					{ className: 'container' },
+					null,
 					React.createElement(
 						'div',
-						{ className: 'pause-btn' },
-						React.createElement('div', { className: 'pause',
+						{ className: 'container' },
+						React.createElement(
+							'div',
+							{ className: 'pause-btn' },
+							React.createElement('div', { className: 'pause',
+								onClick: function onClick() {
+									(0, _jquery2.default)('.pause').removeClass('show');
+									(0, _jquery2.default)('.play').removeClass('playing');
+									(0, _jquery2.default)('.wv').removeClass('loader-container');
+								} })
+						),
+						React.createElement('div', { className: 'play',
 							onClick: function onClick() {
-								(0, _jquery2.default)('.pause').removeClass('show');
-								(0, _jquery2.default)('.play').removeClass('playing');
-								(0, _jquery2.default)('.wv').removeClass('wave');
+								(0, _jquery2.default)(".play").addClass("playing");
+								(0, _jquery2.default)('.pause').addClass('show');
+								(0, _jquery2.default)('.wv').addClass('loader-container');
 							} })
 					),
-					React.createElement('div', { className: 'play',
-						onClick: function onClick() {
-							(0, _jquery2.default)(".play").addClass("playing");
-							(0, _jquery2.default)('.pause').addClass('show');
-							(0, _jquery2.default)('.wv').addClass('wave');
-						} }),
 					React.createElement(
 						'div',
-						{ className: 'ocean' },
-						React.createElement('div', { className: 'wv' }),
-						React.createElement('div', { className: 'wv' })
+						{ className: 'wv' },
+						React.createElement('div', { className: 'rectangle-1' }),
+						React.createElement('div', { className: 'rectangle-2' }),
+						React.createElement('div', { className: 'rectangle-3' }),
+						React.createElement('div', { className: 'rectangle-4' }),
+						React.createElement('div', { className: 'rectangle-5' }),
+						React.createElement('div', { className: 'rectangle-6' }),
+						React.createElement('div', { className: 'rectangle-5' }),
+						React.createElement('div', { className: 'rectangle-4' }),
+						React.createElement('div', { className: 'rectangle-3' }),
+						React.createElement('div', { className: 'rectangle-2' }),
+						React.createElement('div', { className: 'rectangle-1' })
 					)
 				);
 			}
@@ -41306,7 +41319,7 @@
 
 
 	// module
-	exports.push([module.id, ".pause-btn {\n  display: inline-block;\n  height: 60px;\n  width: 46px;\n  cursor: pointer;\n}\n\n.pause {\n  display: inline-block;\n  height: 60px;\n  width: 0;\n  background-color: #545454;\n  border-radius: 2px;\n  -webkit-transform: translateX(-20px);\n          transform: translateX(-20px);\n  cursor: pointer;\n  transition: all 250ms cubic-bezier(0.12, 0.91, 0.67, 0.89);\n}\n.pause.show {\n  width: 20px;\n  -webkit-transform: translateX(5px);\n          transform: translateX(5px);\n}\n.pause.show:after {\n  width: 20px;\n  -webkit-transform: translateX(5px);\n          transform: translateX(5px);\n}\n.pause:after {\n  display: inline-block;\n  position: relative;\n  content: '';\n  left: 25px;\n  height: 60px;\n  width: 0;\n  background-color: #545454;\n  border-radius: 2px;\n  -webkit-transform: translateX(-20px);\n          transform: translateX(-20px);\n  transition: all 250ms cubic-bezier(0.12, 0.91, 0.67, 0.89);\n}\n\n.play {\n  display: inline-block;\n  position: relative;\n  width: 0;\n  height: 0;\n  opacity: 1;\n  border-top: 30px solid transparent;\n  border-bottom: 30px solid transparent;\n  border-left: 50px solid #545454;\n  -webkit-transform: translate(-46px, 0);\n          transform: translate(-15px, 0);\n  cursor: pointer;\n  transition: all 250ms cubic-bezier(0.12, 0.91, 0.67, 0.89);\n}\n.play.playing {\n  border-top: 10px solid transparent;\n  border-bottom: 10px solid transparent;\n  -webkit-transform: translate(20px, -18px);\n          transform: translate(20px, -18px);\n  opacity: 0;\n  visibility: hidden;\n}\n", ""]);
+	exports.push([module.id, ".pause-btn {\n  display: inline-block;\n  height: 60px;\n  width: 46px;\n  cursor: pointer;\n}\n\n.pause {\n  display: inline-block;\n  height: 60px;\n  width: 0;\n  background-color: #545454;\n  border-radius: 2px;\n  -webkit-transform: translateX(-20px);\n          transform: translateX(-20px);\n  cursor: pointer;\n  transition: all 250ms cubic-bezier(0.12, 0.91, 0.67, 0.89);\n}\n.pause.show {\n  width: 20px;\n  -webkit-transform: translateX(5px);\n          transform: translateX(5px);\n}\n.pause.show:after {\n  width: 20px;\n  -webkit-transform: translateX(5px);\n          transform: translateX(5px);\n}\n.pause:after {\n  display: inline-block;\n  position: relative;\n  content: '';\n  left: 25px;\n  height: 60px;\n  width: 0;\n  background-color: #545454;\n  border-radius: 2px;\n  -webkit-transform: translateX(-20px);\n          transform: translateX(-20px);\n  transition: all 250ms cubic-bezier(0.12, 0.91, 0.67, 0.89);\n}\n\n.play {\n  display: inline-block;\n  position: relative;\n  width: 0;\n  height: 0;\n  opacity: 1;\n  border-top: 30px solid transparent;\n  border-bottom: 30px solid transparent;\n  border-left: 50px solid #545454;\n  -webkit-transform: translate(-46px, 0);\n          transform: translate(-15px, 0);\n  cursor: pointer;\n  transition: all 250ms cubic-bezier(0.12, 0.91, 0.67, 0.89);\n}\n.play.playing {\n  border-top: 10px solid transparent;\n  border-bottom: 10px solid transparent;\n  -webkit-transform: translate(20px, -18px);\n          transform: translate(20px, -18px);\n  opacity: 0;\n  visibility: hidden;\n}\n\n@media screen and (max-width: 1270px){\n\n.pause-btn {\n  display: inline-block;\n  height: 30px;\n  width: 23px;\n  cursor: pointer;\n}\n\n}\n", ""]);
 
 	// exports
 
@@ -41346,7 +41359,7 @@
 
 
 	// module
-	exports.push([module.id, ".ocean {\n  height: 5%;\n  width: 100%;\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  background: #015871;\n}\n\n.wave {\n  background: url(http://tedmcdo.com/labs/wave.svg) repeat-x;\n  position: absolute;\n  top: -198px;\n  width: 6400px;\n  height: 198px;\n  -webkit-animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;\n          animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;\n  -webkit-transform: translate3d(0, 0, 0);\n          transform: translate3d(0, 0, 0);\n}\n\n.wave:nth-of-type(2) {\n  top: -175px;\n  -webkit-animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;\n          animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;\n  opacity: 1;\n}\n\n@-webkit-keyframes wave {\n  0% {\n    margin-left: 0;\n  }\n  100% {\n    margin-left: -1600px;\n  }\n}\n\n@keyframes wave {\n  0% {\n    margin-left: 0;\n  }\n  100% {\n    margin-left: -1600px;\n  }\n}\n@-webkit-keyframes swell {\n  0%, 100% {\n    -webkit-transform: translate3d(0, -25px, 0);\n            transform: translate3d(0, -25px, 0);\n  }\n  50% {\n    -webkit-transform: translate3d(0, 5px, 0);\n            transform: translate3d(0, 5px, 0);\n  }\n}\n@keyframes swell {\n  0%, 100% {\n    -webkit-transform: translate3d(0, -25px, 0);\n            transform: translate3d(0, -25px, 0);\n  }\n  50% {\n    -webkit-transform: translate3d(0, 5px, 0);\n            transform: translate3d(0, 5px, 0);\n  }\n}\n", ""]);
+	exports.push([module.id, "<style type=\"text/css\">\n\n/*\n** Title: Loader Demo\n** Author: Zach Cole\n** Inspiration: http://tobiasahlin.com/spinkit/\n*/\n\n#sample{\n}\n\n.loader-container {\n  position: relative;\n  height: 40px;\n  width: 160px;\n  margin: 200px auto 0;\n}\n\n.loader-container > div {\n  position: relative;\n  display: inline-block;\n  background: #03A9F4;\n  height: 100%;\n  width: 10px;\n  margin: 0;\n  -webkit-animation: load 3s ease-in-out infinite;\n  animation: load 3s ease-in-out infinite;\n}\n\n.loader-container .rectangle-2 {\n  -webkit-animation-delay: 0.1s;\n  animation-delay: 0.1s;\n}\n\n.loader-container .rectangle-3 {\n  -webkit-animation-delay: 0.2s;\n  animation-delay: 0.2s;\n}\n\n.loader-container .rectangle-4 {\n  -webkit-animation-delay: 0.3s;\n  animation-delay: 0.3s;\n}\n\n.loader-container .rectangle-5 {\n  -webkit-animation-delay: 0.4s;\n  animation-delay: 0.4s;\n}\n\n.loader-container .rectangle-6 {\n  -webkit-animation-delay: 0.5s;\n  animation-delay: 0.5s;\n} \n\n@-webkit-keyframes load {\n  0%,\n  100% {\n    -webkit-transform: scaleY(1);\n    background: #03A9F4;\n  }\n  16.67% {\n    -webkit-transform: scaleY(3);\n    background: #FF5722;\n  }\n  33.33% {\n    -webkit-transform: scaleY(1);\n    background: #FF5252;\n  }\n  50% {\n    -webkit-transform: scaleY(3);\n    background: #E91E63;\n  }\n  66.67% {\n    -webkit-transform: scaleY(1);\n    background: #9C27B0;\n  }\n  83.34% {\n    -webkit-transform: scaleY(3);\n    background: #673AB7;\n  }\n} \n\n@keyframes load {\n  0%,\n  100% {\n    -webkit-transform: scaleY(1);\n            transform: scaleY(1);\n    background: #03A9F4;\n  }\n  16.67% {\n    -webkit-transform: scaleY(3);\n            transform: scaleY(3);\n    background: #FF5722;\n  }\n  33.33% {\n    -webkit-transform: scaleY(1);\n            transform: scaleY(1);\n    background: #FF5252;\n  }\n  50% {\n    -webkit-transform: scaleY(3);\n            transform: scaleY(3);\n    background: #E91E63;\n  }\n  66.67% {\n    -webkit-transform: scaleY(1);\n            transform: scaleY(1);\n    background: #9C27B0;\n  }\n  83.34% {\n    -webkit-transform: scaleY(3);\n            transform: scaleY(3);\n    background: #673AB7;\n  }\n} ", ""]);
 
 	// exports
 
