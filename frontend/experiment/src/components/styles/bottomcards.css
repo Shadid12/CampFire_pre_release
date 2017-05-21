@@ -25,22 +25,27 @@
   border-radius: 25px;
   height: 300px;
   width: 300px;
+  right: 100px;
 }
 
-@media only screen and (max-width: 750px) {
+@media screen and (max-width: 1275px) {
   #aimg{
   border-radius: 25px;
-  height: 200px;
-  width: 200px;
+  width: 80%;
+  height: 80%;
 }
 .card {
   background: #fff;
   border-radius: 25px;
   display: inline-block;
-  height: 200px;
+  height: 90%;
+  width: 90%;
   margin: 1rem;
   position: relative;
-  width: 200px;
 }
+
+}
+
+@media only screen and (max-width: 750px){
 
 }

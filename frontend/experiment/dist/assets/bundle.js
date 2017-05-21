@@ -32726,7 +32726,7 @@
 	          { className: 'site-nav__item' },
 	          React.createElement(
 	            'a',
-	            { className: 'site-nav__link', href: '#',
+	            { className: 'site-nav__link', href: '/',
 	              id: 'd',
 	              onMouseEnter: function onMouseEnter() {
 	                (0, _jquery2.default)('#d').addClass('animated jello');
@@ -39417,6 +39417,8 @@
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
+	var _MenuItems = __webpack_require__(190);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -39442,6 +39444,11 @@
 				}, 1000);
 			}
 		}, {
+			key: 'goBack',
+			value: function goBack() {
+				window.location.href = "/";
+			}
+		}, {
 			key: 'render',
 			value: function render() {
 				return React.createElement(
@@ -39450,11 +39457,7 @@
 					React.createElement(
 						'div',
 						{ className: 'center' },
-						React.createElement(
-							'button',
-							{ className: 'waves-effect waves-light btn', onClick: this.goBack },
-							'Back'
-						),
+						React.createElement(_MenuItems.MenuItems, null),
 						React.createElement(
 							'h3',
 							{ className: 'cyan-text text-lighten-1', id: 's' },
