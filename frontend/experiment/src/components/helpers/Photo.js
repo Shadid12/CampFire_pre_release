@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import '../styles/photo.css';
 import $ from 'jquery';
+import { browserHistory } from 'react-router'
 
 
 export class Photo extends Component{

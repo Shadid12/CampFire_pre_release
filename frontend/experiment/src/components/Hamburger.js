@@ -25,10 +25,13 @@ export class Hamburger extends Component{
 	 }else{
 	 	$('#heading').addClass('animated bounceOutLeft');
 	 }
+	 
+	 setTimeout( () => {
+	 	this.setState({ isOpen: !(this.state.isOpen) });
+	 }, 300)
 
-	 // $('#heading').addClass('animated bounceOutLeft');
+	 $('#heading').addClass('animated bounceOutLeft');
 
-	 this.setState({ isOpen: !(this.state.isOpen) });
 	}
 
 	render(){
@@ -40,16 +43,15 @@ export class Hamburger extends Component{
     <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" id="bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
   </svg>
   <div className="center">
-  	<h1 id="heading">The Boring Site</h1>
   	{ this.state.isOpen ?
   		<div>
 
 			<MenuItems />
-			<br /><br /><br /><br /><br /><br />
+			<br /><br /><br />
 			<BottomCards />
 		</div>
 		:
-		<p></p>
+		<h1 id="heading">The Boring Site</h1>
   	}
   </div>
 

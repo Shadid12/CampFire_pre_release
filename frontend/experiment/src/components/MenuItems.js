@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import $ from 'jquery';
 import './menuitems.css'
+import { Link } from 'react-router'
 
 export class MenuItems extends Component{
 
@@ -26,15 +27,15 @@ export class MenuItems extends Component{
                 </a>
               </li>
               <li className="site-nav__item">
-                <a className="site-nav__link"
-                   href="/#/gallery"
+                <Link className="site-nav__link"
+                   to="/gallery"
                    id="b"
                    onMouseEnter={ () => { $('#b').addClass('animated jello'); } }
                    onMouseLeave={ () => { $('#b').removeClass('animated jello'); } } >
                     <img src="./assets/icons/004-apple.svg" alt="Home" className="imgClass" />
                     <br />
                     <div>Gallery</div>
-                </a>
+                </Link>
               </li>
               <li className="site-nav__item">
                 <a className="site-nav__link" href="#"
