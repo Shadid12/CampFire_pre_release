@@ -36,6 +36,7 @@ export class Hamburger extends Component{
 
 	render(){
 		return(
+
 <div className="center">
   <svg viewBox="0 0 800 600" onClick={this.handleHamburgerAnimation}>
     <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" id="top" ></path>
@@ -54,8 +55,8 @@ export class Hamburger extends Component{
 		<h1 id="heading">The Boring Site</h1>
   	}
   </div>
-
 </div>
+
 
 
 

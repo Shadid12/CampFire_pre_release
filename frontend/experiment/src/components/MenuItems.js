@@ -38,13 +38,13 @@ export class MenuItems extends Component{
                 </Link>
               </li>
               <li className="site-nav__item">
-                <a className="site-nav__link" href="#"
+                <Link className="site-nav__link" to="/resume"
                    id="c"
                    onMouseEnter={ () => { $('#c').addClass('animated jello'); } }
                    onMouseLeave={ () => { $('#c').removeClass('animated jello'); } } >
                     <img src="./assets/icons/006-chemistry.svg" alt="Home" className="imgClass"  />
-                    <div>Resume</div>
-                </a>
+                    <div>Music</div>
+                </Link>
               </li>
               <li className="site-nav__item">
                 <a className="site-nav__link" href="#"

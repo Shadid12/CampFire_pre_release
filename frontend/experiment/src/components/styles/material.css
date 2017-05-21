@@ -1,0 +1,72 @@
+@-webkit-keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+@keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+.hvr-pulse {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+}
+.hvr-pulse:hover, .hvr-pulse:focus, .hvr-pulse:active {
+  -webkit-animation-name: hvr-pulse;
+  animation-name: hvr-pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.iic{
+	height: 100px;
+	width: 100px;
+	position: relative;
+	top: 75px;
+}
+
+@media screen and (max-width: 1270px){
+.card{
+	height: 200px;
+	width: 200px;
+}
+.iic{
+	height: 75px;
+	width: 75px;
+	position: relative;
+	top: 50px;
+}
+
+}
+
+@media screen and (max-width: 750px) {
+.iic{
+	height: 50px;
+	width: 50px;
+	position: relative;
+	top: 25px;
+}
+
+.card{
+	height: 100px;
+	width: 100px;
+}
+}

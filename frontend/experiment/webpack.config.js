@@ -1,4 +1,5 @@
 var webpack = require("webpack");
+var ModernizrWebpackPlugin = require('modernizr-webpack-plugin');
 
 
 module.exports = {
@@ -44,11 +45,9 @@ module.exports = {
           name: '[path][name].[hash].[ext]',
         },
       },
-
-      {
-        test: /\.(jpg|png|svg)$/,
-        loader: 'url-loader',
-      },
+    ],
+    plugins: [
+        new ModernizrWebpackPlugin()
     ]
   }
 }
