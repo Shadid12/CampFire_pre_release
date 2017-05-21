@@ -47,7 +47,7 @@ export class MenuItems extends Component{
                 </Link>
               </li>
               <li className="site-nav__item">
-                <a className="site-nav__link" href="#"
+                <a className="site-nav__link" href="/"
                     id="d"
                     onMouseEnter={ () => { $('#d').addClass('animated jello'); } }
                     onMouseLeave={ () => { $('#d').removeClass('animated jello'); } } >

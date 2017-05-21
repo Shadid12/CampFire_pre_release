@@ -3,6 +3,7 @@ import '../styles/material.css';
 import {MediaQuery} from 'react-responsive';
 import { PlayButton } from './PlayButton'
 import $ from 'jquery';
+import { MenuItems } from '../MenuItems';
 
 export class MaterialPage extends Component{
 
@@ -11,13 +12,15 @@ export class MaterialPage extends Component{
 			$("#s").addClass("animated swing") }, 1000)
 	}
 
+	goBack(){
+		window.location.href = "/";
+	}
+
 	render(){
 		return(
 			<div className="container">
 				<div className="center">
-					<button className="waves-effect waves-light btn" onClick={this.goBack}>
-						Back
-					</button>
+					<MenuItems />
 					<h3 className="cyan-text text-lighten-1" id="s"> Play me  !!</h3>
 					<PlayButton />
 				</div>
