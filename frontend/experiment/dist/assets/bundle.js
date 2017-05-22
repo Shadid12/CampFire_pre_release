@@ -58,7 +58,7 @@
 
 	var _Resume = __webpack_require__(270);
 
-	__webpack_require__(280);
+	__webpack_require__(283);
 
 	var _reactRouter = __webpack_require__(193);
 
@@ -39344,6 +39344,8 @@
 
 	var _MaterialPage = __webpack_require__(271);
 
+	var _MusicPlayer = __webpack_require__(280);
+
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -41277,6 +41279,8 @@
 							{ className: 'pause-btn' },
 							React.createElement('div', { className: 'pause',
 								onClick: function onClick() {
+									var x = document.getElementById("myAudio");
+									x.pause();
 									(0, _jquery2.default)('.pause').removeClass('show');
 									(0, _jquery2.default)('.play').removeClass('playing');
 									(0, _jquery2.default)('.wv').removeClass('loader-container');
@@ -41285,6 +41289,8 @@
 						),
 						React.createElement('div', { className: 'play',
 							onClick: function onClick() {
+								var x = document.getElementById("myAudio");
+								x.play();
 								(0, _jquery2.default)(".play").addClass("playing");
 								(0, _jquery2.default)('.pause').addClass('show');
 								(0, _jquery2.default)('.wv').addClass('loader-container');
@@ -41305,6 +41311,12 @@
 						React.createElement('div', { className: 'rectangle-3' }),
 						React.createElement('div', { className: 'rectangle-2' }),
 						React.createElement('div', { className: 'rectangle-1' })
+					),
+					React.createElement(
+						'audio',
+						{ id: 'myAudio' },
+						React.createElement('source', {
+							src: './assets/audio/cold.mp3', type: 'audio/mpeg' })
 					)
 				);
 			}
@@ -41397,10 +41409,96 @@
 /* 280 */
 /***/ (function(module, exports, __webpack_require__) {
 
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	exports.MusicPlayer = undefined;
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	__webpack_require__(281);
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var MusicPlayer = exports.MusicPlayer = function (_Component) {
+		_inherits(MusicPlayer, _Component);
+
+		function MusicPlayer() {
+			_classCallCheck(this, MusicPlayer);
+
+			return _possibleConstructorReturn(this, (MusicPlayer.__proto__ || Object.getPrototypeOf(MusicPlayer)).apply(this, arguments));
+		}
+
+		_createClass(MusicPlayer, [{
+			key: 'render',
+			value: function render() {
+				return React.createElement(
+					'div',
+					null,
+					'Music Player'
+				);
+			}
+		}]);
+
+		return MusicPlayer;
+	}(_react.Component);
+
+/***/ }),
+/* 281 */
+/***/ (function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(281);
+	var content = __webpack_require__(282);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(186)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/autoprefixer-loader/index.js!./musicplayer.css", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/autoprefixer-loader/index.js!./musicplayer.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ }),
+/* 282 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(185)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "", ""]);
+
+	// exports
+
+
+/***/ }),
+/* 283 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(284);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(186)(content, {});
@@ -41420,7 +41518,7 @@
 	}
 
 /***/ }),
-/* 281 */
+/* 284 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(185)();

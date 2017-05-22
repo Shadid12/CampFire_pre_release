@@ -72,7 +72,7 @@ export class PlayButton extends Component{
 
 			<audio id="myAudio">
 			  <source 
-			  src="./assets/cold.mp3" type="audio/mpeg"/>
+			  src="./assets/audio/cold.mp3" type="audio/mpeg"/>
 			</audio>
 
 

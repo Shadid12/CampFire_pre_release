@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import '../styles/photo.css';
 import $ from 'jquery';
-import { browserHistory } from 'react-router'
+import { browserHistory, Link } from 'react-router'
 
 
 export class Photo extends Component{
@@ -20,6 +20,9 @@ export class Photo extends Component{
 		return(
 		<div id="sslist">
 
+		  <Link className="button type1" to="/resume">
+		  	Music
+		  </Link>		  
 		  <button className="button type1" onClick={this.goBack}>
 		    Go Back
 		  </button>
