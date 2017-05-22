@@ -18,6 +18,8 @@ export class PlayButton extends Component{
 	}
 
 	render(){
+		
+
 		return(
 			<div>
 			
@@ -27,7 +29,9 @@ export class PlayButton extends Component{
 			  <div className="pause-btn">
 			    <div className="pause"
 			    	  onClick={ () => 
-			  			{ 
+			  			{ 	
+			  				var x = document.getElementById("myAudio");
+			  				x.pause();
 			  				$('.pause').removeClass('show');
   							$('.play').removeClass('playing');
   							$('.wv').removeClass('loader-container');
@@ -39,6 +43,8 @@ export class PlayButton extends Component{
 			  <div className="play" 
 			  		onClick={ () => 
 			  			{ 
+			  				var x = document.getElementById("myAudio");
+			  				x.play();
 			  				$(".play").addClass("playing");
 			  				$('.pause').addClass('show');
 			  				$('.wv').addClass('loader-container');
@@ -64,6 +70,10 @@ export class PlayButton extends Component{
 			</div>
 
 
+			<audio id="myAudio">
+			  <source 
+			  src="./assets/cold.mp3" type="audio/mpeg"/>
+			</audio>
 
 
 			</div>

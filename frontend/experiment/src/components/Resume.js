@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import { Loading } from './helpers/Loading';
 import { MaterialPage } from './helpers/MaterialPage'
+import { MusicPlayer } from './helpers/MusicPlayer'
 
 export class Resume extends Component{
 

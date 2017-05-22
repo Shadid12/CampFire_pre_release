@@ -39417,8 +39417,6 @@
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
-	var _MenuItems = __webpack_require__(190);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -39431,22 +39429,30 @@
 		_inherits(MaterialPage, _Component);
 
 		function MaterialPage() {
+			var _ref;
+
+			var _temp, _this, _ret;
+
 			_classCallCheck(this, MaterialPage);
 
-			return _possibleConstructorReturn(this, (MaterialPage.__proto__ || Object.getPrototypeOf(MaterialPage)).apply(this, arguments));
+			for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+				args[_key] = arguments[_key];
+			}
+
+			return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = MaterialPage.__proto__ || Object.getPrototypeOf(MaterialPage)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+				isPlaying: false
+			}, _temp), _possibleConstructorReturn(_this, _ret);
 		}
 
 		_createClass(MaterialPage, [{
-			key: 'componentDidMount',
-			value: function componentDidMount() {
-				setTimeout(function () {
-					(0, _jquery2.default)("#s").addClass("animated swing");
-				}, 1000);
-			}
-		}, {
 			key: 'goBack',
 			value: function goBack() {
 				window.location.href = "/";
+			}
+		}, {
+			key: 'handlePlaying',
+			value: function handlePlaying() {
+				console.log("Fucking A");
 			}
 		}, {
 			key: 'render',
@@ -39457,13 +39463,7 @@
 					React.createElement(
 						'div',
 						{ className: 'center' },
-						React.createElement(_MenuItems.MenuItems, null),
-						React.createElement(
-							'h3',
-							{ className: 'cyan-text text-lighten-1', id: 's' },
-							' Play me  !!'
-						),
-						React.createElement(_PlayButton.PlayButton, null)
+						React.createElement(_PlayButton.PlayButton, { handler: this.handlePlaying })
 					)
 				);
 			}
@@ -41219,6 +41219,8 @@
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
+	var _MenuItems = __webpack_require__(190);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -41231,17 +41233,42 @@
 		_inherits(PlayButton, _Component);
 
 		function PlayButton() {
+			var _ref;
+
+			var _temp, _this, _ret;
+
 			_classCallCheck(this, PlayButton);
 
-			return _possibleConstructorReturn(this, (PlayButton.__proto__ || Object.getPrototypeOf(PlayButton)).apply(this, arguments));
+			for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+				args[_key] = arguments[_key];
+			}
+
+			return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PlayButton.__proto__ || Object.getPrototypeOf(PlayButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+				isPlaying: false
+			}, _temp), _possibleConstructorReturn(_this, _ret);
 		}
 
 		_createClass(PlayButton, [{
+			key: 'componentDidMount',
+			value: function componentDidMount() {
+				setTimeout(function () {
+					(0, _jquery2.default)("#s").addClass("animated swing");
+				}, 1000);
+			}
+		}, {
 			key: 'render',
 			value: function render() {
+				var _this2 = this;
+
 				return React.createElement(
 					'div',
 					null,
+					React.createElement(_MenuItems.MenuItems, null),
+					React.createElement(
+						'h3',
+						{ className: 'cyan-text text-lighten-1', id: 's' },
+						' Play me  !!'
+					),
 					React.createElement(
 						'div',
 						{ className: 'container' },
@@ -41253,6 +41280,7 @@
 									(0, _jquery2.default)('.pause').removeClass('show');
 									(0, _jquery2.default)('.play').removeClass('playing');
 									(0, _jquery2.default)('.wv').removeClass('loader-container');
+									_this2.props.handler;
 								} })
 						),
 						React.createElement('div', { className: 'play',
@@ -41260,6 +41288,7 @@
 								(0, _jquery2.default)(".play").addClass("playing");
 								(0, _jquery2.default)('.pause').addClass('show');
 								(0, _jquery2.default)('.wv').addClass('loader-container');
+								_this2.props.handler;
 							} })
 					),
 					React.createElement(
